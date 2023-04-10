@@ -54,7 +54,7 @@ jobs:
   shell-scripts:
     runs-on: ubuntu-latest
 
-    needs: build
+    needs: test
     steps:
     - name: Executar scripts externos versionados
       uses: actions/checkout@v3
