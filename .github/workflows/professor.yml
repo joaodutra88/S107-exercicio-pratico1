@@ -50,6 +50,9 @@ jobs:
       with:
         name: arquivo jar
         path: C214-exercicio-pratico1/target/*.jar
+    
+    - name: Setar Variável de Ambiente
+        run: echo "EMAIL=jvitordutra@gmail.com" >> $GITHUB_ENV
   
   shell-scripts:
     runs-on: ubuntu-latest
