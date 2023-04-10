@@ -16,7 +16,6 @@ on:
 
 jobs:
   test:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -32,3 +31,8 @@ jobs:
       run: |
         cd C214-exercicio-pratico1
         mvn clean test site
+
+    - name: Enviar e-mail
+      run: |
+        sudo apt install mailutils
+        echo "Mandando e-mail com mail do linux" | mail -s "Teste de email do GitHub Actions" jvitordutra@gmail.com
