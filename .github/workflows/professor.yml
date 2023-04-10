@@ -14,6 +14,9 @@ on:
   pull_request:
     branches: [ "main" ]
 
+env:
+  EMAIL: jvitordutra@gmail.com
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -26,11 +29,19 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
+    - name: Test with Maven
+      run: |
+        cd C214-exercicio-pratico1
+        mvn clean test site
+    - name: Enviar e-mail
+      run: |
+        sudo apt install mailutils
+        echo "Mandando e-mail com mail do linux" | mail -s "Teste de email do GitHub Actions" ${{ env.EMAIL }}
 
   build:
     runs-on: ubuntu-latest
-
     needs: test
+
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 11
@@ -39,25 +50,20 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-
     - name: Build with maven
       run: |
         cd C214-exercicio-pratico1
         mvn clean install
-
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
       with:
         name: arquivo jar
         path: C214-exercicio-pratico1/target/*.jar
-    
-    - name: Setar Variável de Ambiente
-        run: echo "EMAIL=jvitordutra@gmail.com" >> $GITHUB_ENV
-  
+
   shell-scripts:
     runs-on: ubuntu-latest
-
     needs: test
+
     steps:
     - name: Executar scripts externos versionados
       uses: actions/checkout@v3
