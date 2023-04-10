@@ -2,6 +2,21 @@
 <img src="https://img.shields.io/static/v1?label=Professor&message=Christopher Lima&color=blue&?style=social&logo=GitHub">
 </a>
 
+## Grupo
+
+<a href="https://github.com/joaodutra88">
+<img src="https://img.shields.io/static/v1?label=Github&message=Profile&color=blue&?style=social&logo=GitHub">
+</a>
+
+**João Vítor Carvalho de Paula Dutra 351**
+
+
+<a href="https://github.com/leomendoncaf">
+<img src="https://img.shields.io/static/v1?label=Github&message=Profile&color=blue&?style=social&logo=GitHub">
+</a>
+
+**Leonardo Mendonça Franco 46**
+
 # S107-exercicio-pratico1
 
 ![Repo Size](https://img.shields.io/github/repo-size/joaodutra88/S107-exercicio-pratico1)
@@ -9,7 +24,8 @@
 ![Linguagem mais usada](https://img.shields.io/github/languages/top/joaodutra88/S107-exercicio-pratico1)
 ![Última atualização](https://img.shields.io/github/last-commit/joaodutra88/S107-exercicio-pratico1)
 
-### Questão 1) Utilizando todo conhecimento obtido nas aulas, faça um sistema de CI/CD com GitHub Actions, para realizar etapas de um pipeline. Veja as restrições a seguir:
+### **Questão 1)** Utilizando todo conhecimento obtido nas aulas, faça um sistema de CI/CD com GitHub Actions, para realizar etapas de um pipeline. Veja as restrições a seguir:
+
 
 1. Crie um sistema hipotético de software qualquer ou utilize algum pronto.
 2. O software deve possuir pelo menos 10 cenários de teste unitário e/ou integração
